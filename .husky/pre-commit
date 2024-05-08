@@ -1,3 +1,24 @@
+#!/bin/sh
+#
+# This hook prevents commits that would introduce linting or testing errors.
 
-npx lint-staged
-ng test
+# Run linting
+npm run lint
+
+# Check if linting exited with non-zero status (indicating errors)
+if [ $? -ne 0 ]; then
+  echo "Linting failed. Please fix errors before committing."
+  exit 1
+fi
+
+# Run tests
+npm run test
+
+# Check if tests exited with non-zero status (indicating failures)
+if [ $? -ne 0 ]; then
+  echo "Tests failed. Please fix failing tests before committing."
+  exit 1
+fi
+
+# If everything passed, allow the commit
+exit 0
