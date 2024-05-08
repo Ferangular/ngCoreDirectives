@@ -16,6 +16,7 @@
       ],
       "rules": {
         "no-console": "warn",
+        "no-unused-expressions": "error",
         "@angular-eslint/sort-lifecycle-methods": "error",
         "@angular-eslint/prefer-on-push-component-change-detection": "error",
         "@angular-eslint/component-max-inline-declarations": [
