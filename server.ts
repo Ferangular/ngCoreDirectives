@@ -12,9 +12,9 @@ const app: Application = express();
 app.use(cors({origin: true}));
 app.use(bodyParser.json());
 
-app.route('/api/courses').get(getAllCourses);
-
-app.route('/api/courses/:id').put(saveCourse);
+// app.route('/api/courses').get(getAllCourses);
+//
+// app.route('/api/courses/:id').put(saveCourse);
 
 
 
