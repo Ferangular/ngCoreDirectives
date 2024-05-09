@@ -16,6 +16,8 @@
       ],
       "rules": {
         "no-console": "warn",
+        "semi": "off",
+        "@typescript-eslint/semi": ["error"],
         "no-unused-expressions": "error",
         "@angular-eslint/sort-lifecycle-methods": "error",
         "@angular-eslint/prefer-on-push-component-change-detection": "error",

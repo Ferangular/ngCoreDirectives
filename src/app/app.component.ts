@@ -12,6 +12,11 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'ngCoreDirectives';
+  array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-  hola() {}
+  hola() {
+    if (this.array.length > 0) {
+      this.array.pop();
+    }
+  }
 }
